@@ -35,6 +35,7 @@ export default function LandingPage() {
   const vidRef3 = useRef(null);
   const vidRef4 = useRef(null);
   const vidRef5 = useRef(null);
+  const vidRef6 = useRef(null);
 
 
   React.useEffect(() => {
@@ -55,6 +56,7 @@ export default function LandingPage() {
     e.preventDefault();
     vidRef4.current.play();
     vidRef5.current.play();
+    vidRef6.current.play();
   }
   return (
     <>
@@ -205,11 +207,14 @@ export default function LandingPage() {
               <Col lg="12">
                 <h1 className="text-center">Difference</h1>
               </Col>
-              <Col md="6" className="my-4">
-                <video ref={vidRef4} width="440" height="330" src={require("assets/videos/duck/previous_swing.mp4")} controls="controls" />
+              <Col md="3" className="my-4 video-section">
+                <video ref={vidRef4} width="400" height="300" src={require("assets/videos/duck/previous_swing.mp4")} controls="controls" />
               </Col>
-              <Col md="6" className="my-4">
-                <video ref={vidRef5} width="440" height="330" src={require("assets/videos/duck/swing.mp4")} controls="controls" />
+              <Col md="3" className="my-4 video-section">
+                <video ref={vidRef5} width="400" height="300" src={require("assets/videos/duck/middle_swing.mp4")} controls="controls" />
+              </Col>
+              <Col md="3" className="my-4 video-section">
+                <video ref={vidRef6} width="400" height="300" src={require("assets/videos/duck/swing.mp4")} controls="controls" />
               </Col>
               <Col lg="12">
                 <Button className="btn" onClick={diffPlay}>Play All</Button>

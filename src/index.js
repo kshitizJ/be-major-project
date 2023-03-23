@@ -38,7 +38,7 @@ root.render(
         render={(props) => <Index {...props} />}
       /> */}
       <Route
-        path="/landing-page"
+        path="/"
         render={(props) => <LandingPage {...props} />}
       />
       {/* <Route
@@ -49,7 +49,7 @@ root.render(
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
       /> */}
-      <Redirect from="/" to="/landing-page" />
+      {/* <Redirect from="/" to="/landing-page" /> */}
     </Switch>
   </BrowserRouter>
 );
